@@ -1,0 +1,242 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: #fcfbfc;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Custom Color Variables */
+:root {
+    --primary-color: #270538;
+    --secondary-color: #b61987;
+    --text-muted: #b2b1b1;
+    --bg-light: #f8f9fa;
+    --bg-dark: #343a40;
+}
+
+/* Header Styles */
+header {
+    background-color: var(--bg-light) !important;
+    border-bottom: 2px solid #e9ecef !important;
+}
+
+.logo-img {
+    width: 35px;
+    height: auto;
+}
+
+.brand-title {
+    color: var(--primary-color);
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+.navbar-nav .nav-link {
+    color: var(--primary-color) !important;
+    font-weight: 500;
+    padding: 0.75rem 1rem !important;
+    transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+    color: var(--secondary-color) !important;
+}
+
+.navbar-nav .nav-link i {
+    font-size: 0.9rem;
+}
+
+/* Main Content Styles */
+main {
+    flex: 1;
+}
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(135deg, #fcfbfc 0%, #f8f9fa 100%);
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+}
+
+.hero-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    line-height: 1.2;
+}
+
+.hero-title .text-primary {
+    color: var(--secondary-color) !important;
+}
+
+.hero-description {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #6c757d;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+    transition: all 0.2s ease;
+}
+
+.btn-outline-secondary {
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+}
+
+.btn-outline-secondary:hover {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.hero-visual i {
+    opacity: 0.8;
+}
+
+/* Services Section */
+.services-section {
+    background-color: var(--bg-light) !important;
+}
+
+.section-title {
+    color: var(--primary-color);
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.section-subtitle {
+    color: #6c757d;
+    font-size: 1.1rem;
+}
+
+/* Product Categories & Perks */
+.categories-section {
+    background-color: var(--bg-light) !important;
+}
+
+.category-card-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.category-card {
+    transition: transform 0.2s ease;
+    border-radius: 8px;
+}
+
+.category-card:hover {
+    transform: translateY(-2px);
+}
+
+.perk-card {
+    border-radius: 8px;
+}
+
+.category-card .card-title,
+.perk-card .card-title {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+/* Footer Styles */
+footer {
+    background-color: var(--bg-dark) !important;
+    margin-top: auto;
+}
+
+.footer-logo {
+    width: 25px;
+    height: auto;
+    filter: brightness(0) invert(1);
+}
+
+footer h5, footer h6 {
+    color: #ffffff !important;
+}
+
+footer a {
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: var(--secondary-color) !important;
+}
+
+footer .fab, footer .fas {
+    transition: color 0.2s ease;
+}
+
+footer .fab:hover, footer .fas:hover {
+    color: var(--secondary-color) !important;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2rem;
+    }
+    
+    .hero-description {
+        font-size: 1rem;
+    }
+    
+    .brand-title {
+        font-size: 1.2rem;
+    }
+    
+    .category-card, .perk-card {
+        margin-bottom: 1rem;
+    }
+    
+    .hero-cta .btn {
+        margin-bottom: 0.5rem;
+        width: 100%;
+    }
+    
+    .hero-cta .me-3 {
+        margin-right: 0 !important;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-section {
+        min-height: 50vh;
+        text-align: center;
+    }
+    
+    .hero-title {
+        font-size: 1.8rem;
+    }
+    
+    .categories-section .row.g-4, .perks-section .row.g-4 {
+        --bs-gutter-x: 1rem;
+    }
+}
+
+/* Animation Classes - Removed excessive animations */
+
+/* Custom Utilities */
+.text-primary {
+    color: var(--primary-color) !important;
+}
+
+.bg-primary {
+    background-color: var(--primary-color) !important;
+}

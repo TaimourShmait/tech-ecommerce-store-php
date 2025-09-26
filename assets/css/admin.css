@@ -1,0 +1,70 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    border-bottom: 1px solid black;
+    flex-shrink: 0;  /* Don't shrink header */
+}
+
+header > p {
+    margin: 0;
+    padding: 0;
+    font-size: 1.1rem;
+}
+
+main {
+    flex: 1;  /* Take remaining space after header/footer */
+    overflow-y: auto;  /* Allow scrolling if content is too tall */
+}
+
+footer {
+    flex-shrink: 0;  /* Don't shrink footer */
+}
+
+/* Your existing styles stay the same */
+.sidebar-nav .nav-item {
+    font-size: 1rem;             
+}
+
+.sidebar-link {
+    display: block;
+    padding: 0.75rem 1rem;       
+    font-size: 1.1rem;            
+    font-weight: 500;             
+    border-radius: 0.375rem;     
+    color: #212529;            
+    text-decoration: none;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.sidebar-link:hover, .sidebar-link:focus, .sidebar-link.active {
+    background-color: #e9ecef;  
+    color: #000;                 
+    text-decoration: none;
+}
+
+.product-image {
+  width: 45px;
+  height: 35px;
+  margin: 0;
+}
+
+.image-management-product-cover-image {
+    width: 20rem;
+    height: 15rem;
+    border: 1px solid #b6babd;
+    border-radius: 0.2rem;
+}
