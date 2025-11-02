@@ -9,11 +9,16 @@ $current_page = basename($_SERVER['PHP_SELF']);
 require "../includes/db.php";
 require "../api/cart/cart_functions.php";
 
-$user_id = $_SESSION['user_id'];
+// Initialize cart variables
+$cart_items = [];
+$cart_summary = ['total_quantity' => 0, 'total_price' => 0];
 
-$cart_items = getCartItems($pdo, $user_id);
-$cart_summary = getCartSummary($pdo, $user_id);
-
+// Only get cart data if user is logged in
+if ($is_logged_in) {
+    $user_id = $_SESSION['user_id'];
+    $cart_items = getCartItems($pdo, $user_id);
+    $cart_summary = getCartSummary($pdo, $user_id);
+}
 
 if (!isset($_GET['id']) || !is_numeric($_GET['id'])) {
     header("Location: products.php");
